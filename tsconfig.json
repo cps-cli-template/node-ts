@@ -1,5 +1,18 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "strict": true,
+      "types": ["node"]
+    }
+  },
   "compilerOptions": {
+    // 添加 Json 文件支持
+    "resolveJsonModule": true,
     // 允许未执行的代码不报错
     "allowUnreachableCode": true,
     // 严格模式, 强烈建议开启
@@ -28,10 +41,10 @@
     // 是否生成声明文件
     "declaration": true,
     // 声明文件路径
-    "declarationDir": "./types",
+    "declarationDir": "./build",
     // 此处设置为node,才能解析import xx from 'xx'
     "moduleResolution": "node"
   },
   // 入口文件
-  "include": ["src/index.ts"]
+  "include": ["src/index.ts", "types/**/*.d.ts"]
 }

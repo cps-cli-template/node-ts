@@ -1,20 +1,15 @@
 import { defineConfig } from "rollup";
 
-import fs from "fs";
-import json5 from "json5";
-
 import pkg from "./package.json";
 import { terser } from "rollup-plugin-terser";
 import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "rollup-plugin-typescript2";
 
-const defaultTsconfig = {};
 export const config = defineConfig([
   // UMD (for browser script tag based imports)
   {
     input: "./src/index.ts",
-
     output: [
       {
         file: `build/${pkg.name}.min.js`,
@@ -27,13 +22,10 @@ export const config = defineConfig([
 
     plugins: [
       resolve(),
-
-      typescript({ tsconfigOverride: defaultTsconfig }),
-
+      typescript(),
       babel({
         babelHelpers: "bundled",
       }),
-
       terser(),
     ],
   },
@@ -54,10 +46,7 @@ export const config = defineConfig([
         sourcemap: true,
       },
     ],
-    plugins: [
-      resolve(),
-      typescript({ tsconfigOverride: defaultTsconfig }),
-    ],
+    plugins: [resolve(), typescript()],
   },
 ]);
 

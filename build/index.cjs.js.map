@@ -1,0 +1,1 @@
+{"version":3,"file":"index.cjs.js","sources":["../src/index.ts"],"sourcesContent":["import * as fs from \"fs\";\r\n\r\nconsole.log(fs);\r\n"],"names":["fs"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;AAEA,OAAO,CAAC,GAAG,CAACA,aAAE,CAAC;;"}
