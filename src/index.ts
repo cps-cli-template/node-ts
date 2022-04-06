@@ -1,3 +1,5 @@
 import * as fs from "fs";
 
-console.log(fs);
+export default async () => {
+  console.log("node-ts-temlpate");
+};

@@ -1,7 +1,7 @@
 {
   "author": "capsion",
   "name": "node-ts-rollup-template",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "node项目的基础骨架",
   "type": "module",
   "types": "types/index.d.ts",
@@ -34,7 +34,6 @@
     "rollup": "^2.43.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.2.3",
-    "json5": "^2.2.1"
+    "typescript": "^4.2.3"
   }
 }
