@@ -4,35 +4,17 @@ import pkg from "./package.json";
 import { terser } from "rollup-plugin-terser";
 import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
+import builtins from "builtins";
+
+const outputName = "index";
 
 export const config = defineConfig([
-  // UMD (for browser script tag based imports)
-  {
-    input: "./src/index.ts",
-    output: [
-      {
-        file: `build/${pkg.name}.min.js`,
-        format: "umd",
-        name: "Perspective",
-        esModule: false,
-        sourcemap: true,
-      },
-    ],
-
-    plugins: [
-      resolve(),
-      typescript(),
-      babel({
-        babelHelpers: "bundled",
-      }),
-      terser(),
-    ],
-  },
-
   // ESM (for ES module imports) and CJS (for node.js)
   {
-    input: "./src/index.ts",
+    input: "src/index.ts",
+    external: [...builtins(), ...Object.keys(pkg.devDependencies)],
     output: [
       {
         file: pkg.main,
@@ -46,7 +28,7 @@ export const config = defineConfig([
         sourcemap: true,
       },
     ],
-    plugins: [resolve(), typescript()],
+    plugins: [resolve(), typescript(), commonjs()],
   },
 ]);
 

@@ -1,13 +1,14 @@
 {
+  "extends": "@tsconfig/node16/tsconfig.json",
   "ts-node": {
     "compilerOptions": {
       "resolveJsonModule": true,
       "esModuleInterop": true,
       "target": "ESNext",
-      "module": "ESNext",
+      "module": "CommonJS",
       "moduleResolution": "node",
       "strict": true,
-      "types": ["node"]
+      "types": ["./node_modules/@types", "./types"]
     }
   },
   "compilerOptions": {
@@ -21,7 +22,7 @@
     // import * as React from "react"
     "esModuleInterop": true,
     // 目标js的版本
-    "target": "es6",
+    "target": "ESNext",
     // 目标代码的模块结构版本
     "module": "ESNext",
     // 在表达式和声明上有隐含的 any类型时报错。
@@ -45,6 +46,7 @@
     // 此处设置为node,才能解析import xx from 'xx'
     "moduleResolution": "node"
   },
+
   // 入口文件
   "include": ["src/index.ts", "types/**/*.d.ts"]
 }

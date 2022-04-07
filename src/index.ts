@@ -1,5 +1,3 @@
-import * as fs from "fs";
+export * from "./types";
 
-export default async () => {
-  console.log("node-ts-temlpate");
-};
+export { App } from "./app";
