@@ -1,3 +1,7 @@
+/**
+ * type for App
+ * @public
+ */
 class App {
     async init() {
         console.log("app init");

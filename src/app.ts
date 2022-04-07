@@ -1,4 +1,10 @@
-export class App {
+import { IApp } from "./types";
+
+/**
+ * type for App
+ * @public
+ */
+export class App implements IApp {
   public async init() {
     console.log("app init");
   }

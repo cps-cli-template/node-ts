@@ -7,6 +7,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import builtins from "builtins";
+import json from "@rollup/plugin-json";
 
 const outputName = "index";
 
@@ -28,7 +29,19 @@ export const config = defineConfig([
         sourcemap: true,
       },
     ],
-    plugins: [typescript(), resolve(), commonjs()],
+    plugins: [
+      typescript({
+        tsconfigOverride: {
+          compilerOptions: {
+            target: "ES2017",
+            module: "ES2015",
+          },
+        },
+      }),
+      resolve(),
+      json(),
+      commonjs(),
+    ],
   },
 ]);
 

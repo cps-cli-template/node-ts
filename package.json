@@ -5,8 +5,8 @@
   "description": "node项目的基础骨架",
   "main": "build/index.cjs",
   "module": "build/index.mjs",
-  "types": "build/index.d.ts",
-  "typings": "build/index.d.ts",
+  "types": "docs/index.d.ts",
+  "typings": "docs/index.d.ts",
   "license": "MIT",
   "keywords": ["node-ts"],
   "bin": {
@@ -18,13 +18,16 @@
     "build:cjs": "tsc --module commonjs",
     "tsc": "npx tsc",
     "build": "npx rollup -c rollup.config.ts",
+    "api": "npx api-extractor run --local --diagnostics",
     "test": "npx rollup -c rollup.config.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
+    "@microsoft/api-extractor": "^7.20.1",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.3",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
     "@tsconfig/node16": "^1.0.2",
     "@types/fs-extra": "^9.0.13",

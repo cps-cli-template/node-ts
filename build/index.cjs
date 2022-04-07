@@ -2,6 +2,10 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+/**
+ * type for App
+ * @public
+ */
 class App {
     async init() {
         console.log("app init");

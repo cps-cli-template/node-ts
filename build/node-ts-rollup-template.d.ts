@@ -1,4 +1,3 @@
-import { IApp } from "./types";
 /**
  * type for App
  * @public
@@ -6,3 +5,9 @@ import { IApp } from "./types";
 export declare class App implements IApp {
     init(): Promise<void>;
 }
+
+declare interface IApp {
+    init: () => void;
+}
+
+export { }
