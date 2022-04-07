@@ -15,7 +15,7 @@
 
 
 
-## Usage
+# Usage
 ```bash
 # install the cli
 
@@ -29,7 +29,7 @@ cps template node-ts
 
 
 
-### download with cli
+## use with cli
 
 通过cli安装，模版会自动更新`package.json`的 `name` 和 `author` 字段
 
@@ -37,7 +37,7 @@ cps template node-ts
 
 
 
-### download with gitee/github
+## use with git clone
 
 ```bash
 # git clone
