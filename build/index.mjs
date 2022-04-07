@@ -3,6 +3,7 @@ class App {
         console.log("app init");
     }
 }
+console.log("app: init ");
 
 export { App };
-//# sourceMappingURL=index.esm.js.map
+//# sourceMappingURL=index.mjs.map

@@ -28,7 +28,7 @@ export const config = defineConfig([
         sourcemap: true,
       },
     ],
-    plugins: [resolve(), typescript(), commonjs()],
+    plugins: [typescript(), resolve(), commonjs()],
   },
 ]);
 

@@ -3,16 +3,15 @@
   "name": "node-ts-rollup-template",
   "version": "0.0.1",
   "description": "node项目的基础骨架",
-  "main": "build/index.cjs.js",
-  "module": "build/index.esm.js",
-  "type": "module",
+  "main": "build/index.cjs",
+  "module": "build/index.mjs",
   "types": "build/index.d.ts",
   "typings": "build/index.d.ts",
   "license": "MIT",
   "keywords": ["node-ts"],
   "bin": {
-    "cjs": "bin/app.cjs.js",
-    "esm": "bin/app.esm.js"
+    "cjs": "bin/app.cjs",
+    "esm": "bin/app.mjs"
   },
   "scripts": {
     "build:esm": "tsc --module ESNext",

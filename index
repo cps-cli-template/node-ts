@@ -1,6 +1,0 @@
-const app = () => {
-    console.log("app");
-};
-
-export { app };
-//# sourceMappingURL=index.map

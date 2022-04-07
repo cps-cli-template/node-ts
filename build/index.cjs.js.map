@@ -1,1 +1,0 @@
-{"version":3,"file":"index.cjs.js","sources":["../src/app.ts"],"sourcesContent":["export class App {\r\n  public async init() {\r\n    console.log(\"app init\");\r\n  }\r\n}\r\n"],"names":[],"mappings":";;;;MAAa,GAAG,CAAA;AACP,IAAA,MAAM,IAAI,GAAA;AACf,QAAA,OAAO,CAAC,GAAG,CAAC,UAAU,CAAC,CAAC;KACzB;AACF;;;;"}

@@ -7,6 +7,7 @@ class App {
         console.log("app init");
     }
 }
+console.log("app: init ");
 
 exports.App = App;
-//# sourceMappingURL=index.cjs.js.map
+//# sourceMappingURL=index.cjs.map

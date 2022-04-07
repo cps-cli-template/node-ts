@@ -3,3 +3,6 @@ export class App {
     console.log("app init");
   }
 }
+
+const app = new App();
+console.log("app: init ");
