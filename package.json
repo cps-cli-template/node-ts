@@ -8,10 +8,17 @@
   "types": "docs/index.d.ts",
   "typings": "docs/index.d.ts",
   "license": "MIT",
-  "keywords": ["node-ts"],
+  "keywords": [
+    "node-ts"
+  ],
   "bin": {
     "cjs": "bin/app.cjs",
     "esm": "bin/app.mjs"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "scripts": {
     "build:esm": "tsc --module ESNext",
@@ -34,6 +41,8 @@
     "@types/json5": "^2.2.0",
     "@types/node": "^16.11.26",
     "builtins": "^5.0.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "fs-extra": "^10.0.1",
     "rollup": "^2.43.1",
     "rollup-plugin-terser": "^7.0.2",

@@ -8,8 +8,8 @@
       "module": "CommonJS",
       "moduleResolution": "node",
       "strict": true,
-      "noEmit": true,
-      "types": ["./node_modules/@types", "./types"]
+      "noEmit": true
+      // "types": ["./node_modules/@types", "./types"]
     }
   },
   "compilerOptions": {
